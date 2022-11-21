@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Bahiana&family=Bangers&family=Bebas+Neue&family=Caveat:wght@500&family=Chivo&family=Courgette&family=Metal&family=Mouse+Memoirs&family=Noto+Sans:wght@300&family=Permanent+Marker&family=Satisfy&family=Secular+One&display=swap');
+
+
+.linkNav{
+   margin: 20px;
+   text-decoration: none;
+   list-style: none;   
+   display: inline;
+   font-size: x-large;
+   font-family: 'Secular One', sans-serif;
+   cursor: pointer;
+   font-weight: 100;
+}
+
+.nav{
+    display: flex;   
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    background-color: orange;
+}
+.logo{
+    width: 12%;
+    height: 12%;
+    padding: 1%;
+}
