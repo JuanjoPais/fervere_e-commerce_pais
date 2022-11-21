@@ -2,14 +2,13 @@
 
 
 .linkNav{
-   margin: 20px;
+   margin: 20px;   
    text-decoration: none;
    list-style: none;   
    display: inline;
-   font-size: x-large;
-   font-family: 'Secular One', sans-serif;
-   cursor: pointer;
-   font-weight: 100;
+ 
+  
+   
 }
 
 .nav{
@@ -18,9 +17,19 @@
     align-items: center;
     justify-content: space-between;
     background-color: orange;
+    border-bottom: 2px black solid;
 }
 .logo{
     width: 12%;
     height: 12%;
     padding: 1%;
+}
+
+.btnNav{
+    font-size: large;
+    font-family: 'Secular One', sans-serif;
+    border: none;
+    box-shadow: 3px 3px 1px black;
+    background-color: orange;
+    cursor: pointer;
 }
