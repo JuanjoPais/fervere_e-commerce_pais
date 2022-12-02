@@ -1,21 +1,10 @@
-
 .App {
-  min-height: 100vh;
-  text-align: center; 
-  background-color: rgb(156, 202, 113);
-  
+	min-height: 100vh;
+	text-align: center;
+	background-color: rgb(156, 202, 113);
 }
 
-.contenedorCantidadItem{
-  display: flex;
-  justify-content: space-around;
+.contenedorCantidadItem {
+	display: flex;
+	justify-content: space-around;
 }
-
-
-
-
-
-
-
-
-

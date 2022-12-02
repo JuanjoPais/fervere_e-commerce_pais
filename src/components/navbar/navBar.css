@@ -1,35 +1,31 @@
-@import url('https://fonts.googleapis.com/css2?family=Bahiana&family=Bangers&family=Bebas+Neue&family=Caveat:wght@500&family=Chivo&family=Courgette&family=Metal&family=Mouse+Memoirs&family=Noto+Sans:wght@300&family=Permanent+Marker&family=Satisfy&family=Secular+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Bahiana&family=Bangers&family=Bebas+Neue&family=Caveat:wght@500&family=Chivo&family=Courgette&family=Metal&family=Mouse+Memoirs&family=Noto+Sans:wght@300&family=Permanent+Marker&family=Satisfy&family=Secular+One&display=swap");
 
-
-.linkNav{
-   margin: 20px;   
-   text-decoration: none;
-   list-style: none;   
-   display: inline;
- 
-  
-   
+.linkNav {
+	margin: 20px;
+	text-decoration: none;
+	list-style: none;
+	display: inline;
 }
 
-.nav{
-    display: flex;   
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    background-color: orange;
-    border-bottom: 2px black solid;
+.nav {
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-between;
+	background-color: orange;
+	border-bottom: 2px black solid;
 }
-.logo{
-    width: 12%;
-    height: 12%;
-    padding: 1%;
+.logo {
+	width: 12%;
+	height: 12%;
+	padding: 1%;
 }
 
-.btnNav{
-    font-size: large;
-    font-family: 'Secular One', sans-serif;
-    border: none;
-    box-shadow: 3px 3px 1px black;
-    background-color: orange;
-    cursor: pointer;
+.btnNav {
+	font-size: large;
+	font-family: "Secular One", sans-serif;
+	border: none;
+	box-shadow: 3px 3px 1px black;
+	background-color: orange;
+	cursor: pointer;
 }
