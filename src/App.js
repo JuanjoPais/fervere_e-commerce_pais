@@ -21,7 +21,9 @@ function App() {
 				<ItemCount initial={0} stock={10} onAdd={handleOnAdd} />
 				<ItemCount initial={0} stock={10} onAdd={handleOnAdd} />
 			</div>
-			<ItemsContainer />
+			<div className="contenedorCantidadItem">
+				<ItemsContainer />
+			</div>
 		</div>
 	);
 }
