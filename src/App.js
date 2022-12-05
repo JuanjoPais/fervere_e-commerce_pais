@@ -1,29 +1,34 @@
 import "./App.css";
 import Navbar from "./components/navbar/navBar";
 import ItemListContainer from "./components/itemListContainer/itemListContainer";
-import ItemCount from "./components/itemCount/ItemCount";
-import ItemsContainer from "./components/itemsContainer/ItemsContainer";
+
+import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 //esta funcion va aca?
 //como traigo una variable suelta? Para meter un reset y chequear el stock
-const handleOnAdd = (cantidad) => {
-	alert(`Se agregaron al carrito ` + cantidad + ` unidades.`);
-};
 
 function App() {
 	return (
 		<div className="App">
-			<Navbar />
-			<ItemListContainer greeting="Tentate con nuestras birras" />
-			<div className="contenedorCantidadItem">
-				<ItemCount initial={0} stock={10} onAdd={handleOnAdd} />
-				<ItemCount initial={0} stock={10} onAdd={handleOnAdd} />
-				<ItemCount initial={0} stock={10} onAdd={handleOnAdd} />
-				<ItemCount initial={0} stock={10} onAdd={handleOnAdd} />
-			</div>
-			<div className="contenedorCantidadItem">
-				<ItemsContainer />
-			</div>
+			<BrowserRouter>
+				<Navbar />
+				<Routes>
+					<Route
+						path="/"
+						element={
+							<ItemListContainer greeting="Probá nuestras cervezas artesanales" />
+						}
+					/>
+					<Route
+						path="/categoria/:categoriaId"
+						element={
+							<ItemListContainer greeting="Probá nuestras cervezas artesanales" />
+						}
+					/>
+					<Route path="/item/:itemId" element={<ItemDetailContainer />} />
+				</Routes>
+			</BrowserRouter>
 		</div>
 	);
 }

@@ -3,8 +3,3 @@
 	text-align: center;
 	background-color: rgb(156, 202, 113);
 }
-
-.contenedorCantidadItem {
-	display: flex;
-	justify-content: space-around;
-}

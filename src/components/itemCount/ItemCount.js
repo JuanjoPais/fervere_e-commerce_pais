@@ -16,7 +16,7 @@ const ItemCount = ({initial, stock, onAdd}) => {
 			<div className="cantidad">
 				<img
 					className="signo"
-					src={"./images/minus.png"}
+					src={"../images/minus.png"}
 					alt="simbolo resta"
 					onClick={() => {
 						decrement();
@@ -25,7 +25,7 @@ const ItemCount = ({initial, stock, onAdd}) => {
 				<h4>{count}</h4>
 				<img
 					className="signo"
-					src={"./images/add.png"}
+					src={"../images/add.png"}
 					alt="simbolo suma"
 					onClick={() => {
 						increment();

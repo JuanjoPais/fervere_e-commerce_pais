@@ -1,0 +1,10 @@
+.fotoDetalle {
+	width: 20%;
+	height: 20%;
+}
+
+.cajaDetalle {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}

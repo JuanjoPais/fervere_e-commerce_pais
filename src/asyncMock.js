@@ -29,6 +29,22 @@ export const getItems = () => {
 	return new Promise((resolve) => {
 		setTimeout(() => {
 			resolve(items);
-		}, 2000);
+		}, 1000);
+	});
+};
+
+export const getItemsByCategoria = (categoriaId) => {
+	return new Promise((resolve) => {
+		setTimeout(() => {
+			resolve(items.filter((item) => item.categoria === categoriaId));
+		}, 1000);
+	});
+};
+
+export const getItemByID = (id) => {
+	return new Promise((resolve) => {
+		setTimeout(() => {
+			resolve(items.find((item) => item.id === id));
+		}, 1000);
 	});
 };
