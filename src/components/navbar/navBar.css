@@ -16,8 +16,8 @@
 	border-bottom: 2px black solid;
 }
 .logo {
-	width: 12%;
-	height: 12%;
+	width: 70%;
+	height: 70%;
 	padding: 1%;
 }
 
@@ -27,6 +27,16 @@
 	border: none;
 	box-shadow: 3px 3px 1px black;
 	background-color: orange;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.btnNavActive {
+	font-size: large;
+	font-family: "Secular One", sans-serif;
+	border: none;
+	box-shadow: 3px 3px 1px black;
+	background-color: green;
 	cursor: pointer;
 	text-decoration: none;
 }
