@@ -21,7 +21,7 @@ const Navbar = () => {
 
 				<li className="linkNav">
 					<NavLink
-						to={"/categoria/botellas"}
+						to={"/categoria/Botellas"}
 						className={({isActive}) => (isActive ? "btnNavActive" : "btnNav")}
 					>
 						Botellas
@@ -29,7 +29,7 @@ const Navbar = () => {
 				</li>
 				<li className="linkNav">
 					<NavLink
-						to={"/categoria/growler"}
+						to={"/categoria/Growler"}
 						className={({isActive}) => (isActive ? "btnNavActive" : "btnNav")}
 					>
 						Growlers
@@ -37,7 +37,7 @@ const Navbar = () => {
 				</li>
 				<li className="linkNav">
 					<NavLink
-						to={"/categoria/merchandising"}
+						to={"/categoria/Merchandising"}
 						className={({isActive}) => (isActive ? "btnNavActive" : "btnNav")}
 					>
 						Merchandising

@@ -4,7 +4,9 @@ import "./item.css";
 const Item = ({item}) => {
 	return (
 		<div className="item">
-			<img className="fotoDetalle" src={item.url} alt="foto de birra"></img>
+			<Link to={`/item/${item.id}`}>
+				<img className="fotoItem" src={item.url} alt="foto de birra"></img>
+			</Link>
 			<h2>{item.nombre}</h2>
 			<p>{item.categoria}</p>
 			<p>{item.descripcion}</p>
