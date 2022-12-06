@@ -23,6 +23,38 @@ const items = [
 		categoria: "Merchandising",
 		url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyJukoWo7M8bbXH-tDGz8Dw2P8djQI3xfdUb-6kGOLq5VzgjAXlDp30tpOnn5TK2ymYs8&usqp=CAU",
 	},
+	{
+		id: "4",
+		nombre: "Gorra",
+		descripcion: "Gorra trucker",
+		stock: "20",
+		categoria: "Merchandising",
+		url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyJukoWo7M8bbXH-tDGz8Dw2P8djQI3xfdUb-6kGOLq5VzgjAXlDp30tpOnn5TK2ymYs8&usqp=CAU",
+	},
+	{
+		id: "5",
+		nombre: "Gorra",
+		descripcion: "Gorra trucker",
+		stock: "20",
+		categoria: "Merchandising",
+		url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyJukoWo7M8bbXH-tDGz8Dw2P8djQI3xfdUb-6kGOLq5VzgjAXlDp30tpOnn5TK2ymYs8&usqp=CAU",
+	},
+	{
+		id: "6",
+		nombre: "Gorra",
+		descripcion: "Gorra trucker",
+		stock: "20",
+		categoria: "Merchandising",
+		url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyJukoWo7M8bbXH-tDGz8Dw2P8djQI3xfdUb-6kGOLq5VzgjAXlDp30tpOnn5TK2ymYs8&usqp=CAU",
+	},
+	{
+		id: "7",
+		nombre: "Gorra",
+		descripcion: "Gorra trucker",
+		stock: "20",
+		categoria: "Merchandising",
+		url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyJukoWo7M8bbXH-tDGz8Dw2P8djQI3xfdUb-6kGOLq5VzgjAXlDp30tpOnn5TK2ymYs8&usqp=CAU",
+	},
 ];
 
 export const getItems = () => {
