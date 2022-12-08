@@ -1,0 +1,9 @@
+.fav {
+	position: relative;
+	top: 10%;
+	left: 40%;
+	border: black solid 1px;
+	border-radius: 50%;
+	width: fit-content;
+	height: fit-content;
+}
