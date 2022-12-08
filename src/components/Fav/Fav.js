@@ -18,7 +18,7 @@ const Fav = () => {
 			}}
 			style={{backgroundColor: ""}}
 			className={"fav"}
-			src=".\images\beerFav .png"
+			src={process.env.PUBLIC_URL + "/images/beerFav .png"}
 			alt="favorito"
 		/>
 	);

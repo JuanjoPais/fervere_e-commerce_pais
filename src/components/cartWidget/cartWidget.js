@@ -4,7 +4,7 @@ const CartWidget = () => {
 	return (
 		<button className="btnCarrito">
 			<img
-				src={`./images/beverage.png`}
+				src={process.env.PUBLIC_URL + "/images/beverage.png"}
 				alt="carrito"
 				className="iconoCarrito"
 			/>
