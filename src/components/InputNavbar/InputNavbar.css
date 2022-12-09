@@ -1,0 +1,10 @@
+.input {
+	position: relative;
+	left: 76%;
+	top: -32%;
+	padding: 1%;
+	width: fit-content;
+	border: 2px solid black;
+	border-radius: 5%;
+	background-color: orange;
+}

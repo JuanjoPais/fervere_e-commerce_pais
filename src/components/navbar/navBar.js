@@ -47,9 +47,11 @@ const Navbar = () => {
 						Merchandising
 					</NavLink>
 				</li>
+
 				<li className="linkNav">
 					<NavLink className="btnNav">Contacto</NavLink>
 				</li>
+
 				<CartWidget />
 			</ul>
 		</nav>

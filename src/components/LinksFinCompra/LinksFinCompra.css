@@ -1,15 +1,9 @@
-.cantidad {
+.contenedorLinks {
 	display: flex;
-	justify-content: center;
-	margin: 5px;
-	align-items: center;
+	flex-direction: row;
+	gap: 20px;
 }
-
-.signo {
-	height: fit-content;
-	margin: 20px;
-}
-.btnMandarAlCarrito {
+.LinkFinCompra {
 	text-decoration: none;
 	font-size: larger;
 	font-weight: 500;

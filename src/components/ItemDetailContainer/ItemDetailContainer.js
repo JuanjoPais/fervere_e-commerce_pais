@@ -4,9 +4,12 @@ import {useParams} from "react-router-dom";
 import ItemCount from "../itemCount/ItemCount";
 import "./ItemDetailContainer.css";
 
+import LinksFinCompra from "../LinksFinCompra/LinksFinCompra";
+
 const ItemDetailContainer = () => {
 	const [item, setItem] = useState({});
 	const [isLoading, setIsLoading] = useState(true);
+	const [cantidadAAgregar, setCantidadAAgregar] = useState(0);
 
 	const params = useParams();
 
@@ -27,6 +30,7 @@ const ItemDetailContainer = () => {
 
 	const handleOnAdd = (cantidad) => {
 		alert(`Se agregaron al carrito ` + cantidad + ` unidades.`);
+		setCantidadAAgregar(cantidad);
 	};
 
 	return (
@@ -41,8 +45,14 @@ const ItemDetailContainer = () => {
 				<div className="datosDetalle">
 					<h3>{item.nombre}</h3>
 					<p>{item.categoria}</p>
+					<p>$ {item.precio}</p>
 					<p>{item.descripcion}</p>
-					<ItemCount initial={0} stock={10} onAdd={handleOnAdd} />
+
+					{cantidadAAgregar === 0 ? (
+						<ItemCount initial={0} stock={item.stock} onAdd={handleOnAdd} />
+					) : (
+						<LinksFinCompra />
+					)}
 				</div>
 			</div>
 		</div>
