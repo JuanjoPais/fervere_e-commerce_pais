@@ -1,17 +1,29 @@
 import "./App.css";
 import Navbar from "./components/navbar/navBar";
 import ItemListContainer from "./components/itemListContainer/itemListContainer";
-import {createContext} from "react";
+import {createContext, useState} from "react";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
+import Carrito from "./components/Carrito/Carrito";
 
-const favoritosContext = createContext();
+export const alCarritoContext = createContext();
 
 function App() {
-	const favoritos = [];
+	const [alCarrito, setAlCarrito] = useState([]);
+
+	const agregarACarrito = (itemAAgregar) => {
+		if (!estaEnCarrito(itemAAgregar.id)) {
+			setAlCarrito([...alCarrito, itemAAgregar]);
+		}
+	};
+
+	const estaEnCarrito = (id) => {
+		return alCarrito.some((items) => items.id === id);
+	};
+
 	return (
 		<div className="App">
-			<favoritosContext.Provider value={favoritos}>
+			<alCarritoContext.Provider value={{alCarrito, agregarACarrito}}>
 				<BrowserRouter>
 					<Navbar />
 					<Routes>
@@ -28,9 +40,10 @@ function App() {
 							}
 						/>
 						<Route path="/item/:itemId" element={<ItemDetailContainer />} />
+						<Route path="/carrito" element={<Carrito />} />
 					</Routes>
 				</BrowserRouter>
-			</favoritosContext.Provider>
+			</alCarritoContext.Provider>
 		</div>
 	);
 }

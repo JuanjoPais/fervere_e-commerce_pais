@@ -1,12 +1,14 @@
-import {useState, useEffect} from "react";
+import {useState, useEffect, useContext} from "react";
 import {getItemByID} from "../../asyncMock";
 import {useParams} from "react-router-dom";
 import ItemCount from "../itemCount/ItemCount";
 import "./ItemDetailContainer.css";
+import {alCarritoContext} from "../../App";
 
 import LinksFinCompra from "../LinksFinCompra/LinksFinCompra";
 
 const ItemDetailContainer = () => {
+	const {agregarACarrito} = useContext(alCarritoContext);
 	const [item, setItem] = useState({});
 	const [isLoading, setIsLoading] = useState(true);
 	const [cantidadAAgregar, setCantidadAAgregar] = useState(0);
@@ -31,6 +33,7 @@ const ItemDetailContainer = () => {
 	const handleOnAdd = (cantidad) => {
 		alert(`Se agregaron al carrito ` + cantidad + ` unidades.`);
 		setCantidadAAgregar(cantidad);
+		agregarACarrito(item);
 	};
 
 	return (

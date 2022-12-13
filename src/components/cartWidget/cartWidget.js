@@ -1,6 +1,11 @@
 import "./carrito.css";
+import {useContext} from "react";
+import {alCarritoContext} from "../../App";
+import {Link} from "react-router-dom";
 
 const CartWidget = () => {
+	const {alCarrito} = useContext(alCarritoContext);
+
 	return (
 		<button className="btnCarrito">
 			<img
@@ -8,7 +13,9 @@ const CartWidget = () => {
 				alt="carrito"
 				className="iconoCarrito"
 			/>
-			<div className="contadorCarrito">0</div>
+			<Link to="/carrito" className="contadorCarrito">
+				{alCarrito.length}
+			</Link>
 		</button>
 	);
 };
