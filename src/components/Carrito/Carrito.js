@@ -8,7 +8,7 @@ const Carrito = () => {
 		<div>
 			{alCarrito.map((item) => {
 				return (
-					<div>
+					<div key={item.id}>
 						<h3>{item.nombre}</h3>
 						<p>{item.categoria}</p>
 						<p>$ {item.precio}</p>

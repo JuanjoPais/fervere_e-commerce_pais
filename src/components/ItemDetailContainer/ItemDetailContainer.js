@@ -34,6 +34,7 @@ const ItemDetailContainer = () => {
 		alert(`Se agregaron al carrito ` + cantidad + ` unidades.`);
 		setCantidadAAgregar(cantidad);
 		agregarACarrito(item);
+		console.log(item);
 	};
 
 	return (
