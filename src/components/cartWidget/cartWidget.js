@@ -1,6 +1,6 @@
 import "./carrito.css";
 import {useContext} from "react";
-import {alCarritoContext} from "../../App";
+import {alCarritoContext} from "../../Contexts/CartContext/CartContext";
 import {Link} from "react-router-dom";
 
 const CartWidget = () => {

@@ -1,8 +1,11 @@
 import "./navBar.css";
 import CartWidget from "../cartWidget/cartWidget";
 import {NavLink} from "react-router-dom";
+import {AuthContext} from "../../Contexts/AuthContext/AuthContext";
+import {useContext} from "react";
 
 const Navbar = () => {
+	const {user} = useContext(AuthContext);
 	return (
 		<nav className="nav">
 			<NavLink to={"/"}>
@@ -49,10 +52,12 @@ const Navbar = () => {
 				</li>
 
 				<li className="linkNav">
-					<NavLink className="btnNav">Contacto</NavLink>
+					<NavLink to={"/login"} className="btnNav">
+						Login
+					</NavLink>
 				</li>
 
-				<CartWidget />
+				{user && <CartWidget />}
 			</ul>
 		</nav>
 	);

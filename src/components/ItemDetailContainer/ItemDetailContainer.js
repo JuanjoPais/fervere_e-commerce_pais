@@ -3,7 +3,7 @@ import {getItemByID} from "../../asyncMock";
 import {useParams} from "react-router-dom";
 import ItemCount from "../itemCount/ItemCount";
 import "./ItemDetailContainer.css";
-import {alCarritoContext} from "../../App";
+import {alCarritoContext} from "../../Contexts/CartContext/CartContext";
 
 import LinksFinCompra from "../LinksFinCompra/LinksFinCompra";
 
