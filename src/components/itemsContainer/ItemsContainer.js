@@ -7,6 +7,7 @@ import {useParams} from "react-router-dom";
 const ItemsContainer = () => {
 	const [items, setItems] = useState([]);
 	const {categoriaId} = useParams();
+	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
 		if (!categoriaId) {
@@ -16,6 +17,9 @@ const ItemsContainer = () => {
 				})
 				.catch((error) => {
 					console.log(error);
+				})
+				.finally(() => {
+					setLoading(false);
 				});
 		} else {
 			getItemsByCategoria(categoriaId)
@@ -24,9 +28,16 @@ const ItemsContainer = () => {
 				})
 				.catch((error) => {
 					console.log(error);
+				})
+				.finally(() => {
+					setLoading(false);
 				});
 		}
 	}, [categoriaId]);
+
+	if (loading === true) {
+		return <h1>spinner</h1>;
+	}
 
 	return (
 		<div>
