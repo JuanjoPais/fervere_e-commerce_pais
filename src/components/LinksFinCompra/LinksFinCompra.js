@@ -4,7 +4,7 @@ import "./LinksFinCompra.css";
 const LinksFinCompra = () => {
 	return (
 		<div className="contenedorLinks">
-			<Link className="LinkFinCompra" to="/cart">
+			<Link className="LinkFinCompra" to="/carrito">
 				Finalizar compra
 			</Link>
 			<Link className="LinkFinCompra" to="/">

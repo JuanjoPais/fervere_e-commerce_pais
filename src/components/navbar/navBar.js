@@ -51,11 +51,19 @@ const Navbar = () => {
 					</NavLink>
 				</li>
 
-				<li className="linkNav">
-					<NavLink to={"/login"} className="btnNav">
-						Login
-					</NavLink>
-				</li>
+				{user ? (
+					<li className="linkNav">
+						<NavLink to={"/login"} className="btnNav">
+							Logout
+						</NavLink>
+					</li>
+				) : (
+					<li className="linkNav">
+						<NavLink to={"/login"} className="btnNav">
+							Login
+						</NavLink>
+					</li>
+				)}
 
 				{user && <CartWidget />}
 			</ul>

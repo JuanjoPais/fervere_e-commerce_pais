@@ -16,7 +16,9 @@ export const CartProvider = ({children}) => {
 	};
 
 	return (
-		<alCarritoContext.Provider value={{alCarrito, agregarACarrito}}>
+		<alCarritoContext.Provider
+			value={{alCarrito, agregarACarrito, estaEnCarrito}}
+		>
 			{children}
 		</alCarritoContext.Provider>
 	);

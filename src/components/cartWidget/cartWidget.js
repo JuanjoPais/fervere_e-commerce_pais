@@ -4,8 +4,6 @@ import {alCarritoContext} from "../../Contexts/CartContext/CartContext";
 import {Link} from "react-router-dom";
 
 const CartWidget = () => {
-	const {alCarrito} = useContext(alCarritoContext);
-
 	return (
 		<button className="btnCarrito">
 			<img
@@ -14,7 +12,7 @@ const CartWidget = () => {
 				className="iconoCarrito"
 			/>
 			<Link to="/carrito" className="contadorCarrito">
-				{alCarrito.length}
+				0
 			</Link>
 		</button>
 	);

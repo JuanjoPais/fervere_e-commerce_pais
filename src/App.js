@@ -40,4 +40,14 @@ function App() {
 	);
 }
 
+/*
+Agregar spinners
+editar con css
+favoritos?
+firebasew
+optimizacion
+orden de compra
+formulario
+*/
+
 export default App;

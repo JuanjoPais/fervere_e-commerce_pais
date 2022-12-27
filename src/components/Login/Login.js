@@ -1,5 +1,6 @@
 import {useContext, useState} from "react";
 import {AuthContext} from "../../Contexts/AuthContext/AuthContext";
+import {Link} from "react-router-dom";
 
 const Login = () => {
 	const [username, setUsername] = useState("");
@@ -17,6 +18,8 @@ const Login = () => {
 			<div>
 				<h1>Logout</h1>
 				<button onClick={() => logout()}>Logout</button>
+
+				<Link to={"/"}>Ir al Home</Link>
 			</div>
 		);
 	}
