@@ -18,7 +18,7 @@ const ItemDetail = ({
 	const handleOnAdd = (cantidad) => {
 		alert(`Se agregaron al carrito ` + cantidad + ` unidades.`);
 		setCantidadAAgregar(cantidad);
-		agregarACarrito(id, url, precio, nombre, cantidad);
+		agregarACarrito({id, url, precio, nombre, cantidad});
 	};
 
 	return (

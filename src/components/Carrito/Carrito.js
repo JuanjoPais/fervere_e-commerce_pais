@@ -2,7 +2,10 @@ import {useContext} from "react";
 import {alCarritoContext} from "../../Contexts/CartContext/CartContext";
 
 const Carrito = () => {
-	const {alCarrito} = useContext(alCarritoContext);
+	const {alCarrito, getTotal, removeItem, clearAll} =
+		useContext(alCarritoContext);
+
+	const mostrarTotal = getTotal();
 
 	return (
 		<div>
@@ -12,10 +15,17 @@ const Carrito = () => {
 						<h3>{item.nombre}</h3>
 						<p>{item.categoria}</p>
 						<p>$ {item.precio}</p>
+						<p> {item.cantidad}</p>
+						<p>Sub total: {item.precio * item.cantidad}</p>
 						<img src={item.url} alt="foto" />
+						<button onClick={() => removeItem(item.id)}>Eliminar Item</button>
 					</div>
 				);
 			})}
+
+			<button onClick={() => clearAll()}>Borrar todo</button>
+
+			<h1>Total a pagar: $ {mostrarTotal} </h1>
 		</div>
 	);
 };

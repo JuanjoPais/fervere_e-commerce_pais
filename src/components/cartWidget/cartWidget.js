@@ -4,6 +4,11 @@ import {alCarritoContext} from "../../Contexts/CartContext/CartContext";
 import {Link} from "react-router-dom";
 
 const CartWidget = () => {
+	const {getCantidad, getTotal} = useContext(alCarritoContext);
+
+	const cantidadTotal = getCantidad();
+	const totalAApagar = getTotal();
+
 	return (
 		<button className="btnCarrito">
 			<img
@@ -11,9 +16,10 @@ const CartWidget = () => {
 				alt="carrito"
 				className="iconoCarrito"
 			/>
-			<Link to="/carrito" className="contadorCarrito">
-				0
-			</Link>
+			<Link to="/carrito" className="contadorCarrito"></Link>
+
+			<h4>{cantidadTotal} items</h4>
+			<h4>${totalAApagar}</h4>
 		</button>
 	);
 };
