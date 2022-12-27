@@ -1,8 +1,10 @@
 import {useEffect, useState} from "react";
 import ItemList from "../ItemList/ItemList";
-import {getItems, getItemsByCategoria} from "../../asyncMock";
+
 import "./ItemsContainer.css";
 import {useParams} from "react-router-dom";
+import {collection, getDocs, query, where} from "firebase/firestore";
+import {db} from "../../servicios/firebase/firebaseConfig";
 
 const ItemsContainer = () => {
 	const [items, setItems] = useState([]);
@@ -10,29 +12,25 @@ const ItemsContainer = () => {
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
-		if (!categoriaId) {
-			getItems()
-				.then((response) => {
-					setItems(response);
-				})
-				.catch((error) => {
-					console.log(error);
-				})
-				.finally(() => {
-					setLoading(false);
+		const productsRef = categoriaId
+			? query(collection(db, "products"), where(`categoria`, `==`, categoriaId))
+			: collection(db, "products");
+
+		getDocs(productsRef)
+			.then((response) => {
+				const productsAdapted = response.docs.map((doc) => {
+					const data = doc.data();
+
+					return {id: doc.id, ...data};
 				});
-		} else {
-			getItemsByCategoria(categoriaId)
-				.then((response) => {
-					setItems(response);
-				})
-				.catch((error) => {
-					console.log(error);
-				})
-				.finally(() => {
-					setLoading(false);
-				});
-		}
+				setItems(productsAdapted);
+			})
+			.catch((error) => {
+				console.error(error);
+			})
+			.finally(() => {
+				setLoading(false);
+			});
 	}, [categoriaId]);
 
 	if (loading === true) {

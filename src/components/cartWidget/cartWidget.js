@@ -16,10 +16,10 @@ const CartWidget = () => {
 				alt="carrito"
 				className="iconoCarrito"
 			/>
-			<Link to="/carrito" className="contadorCarrito"></Link>
-
-			<h4>{cantidadTotal} items</h4>
-			<h4>${totalAApagar}</h4>
+			<Link to="/carrito" className="contadorCarrito">
+				<h4>{cantidadTotal} items</h4>
+				<h4>${totalAApagar}</h4>
+			</Link>
 		</button>
 	);
 };
