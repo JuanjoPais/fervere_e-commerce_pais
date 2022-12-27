@@ -4,6 +4,7 @@ import "./ItemDetailContainer.css";
 import ItemDetail from "../ItemDetail/ItemDetail";
 import {getDoc, doc} from "firebase/firestore";
 import {db} from "../../servicios/firebase/firebaseConfig";
+import {InfinitySpin} from "react-loader-spinner";
 
 const ItemDetailContainer = () => {
 	const [item, setItem] = useState({});
@@ -31,7 +32,11 @@ const ItemDetailContainer = () => {
 	}, [itemId]);
 
 	if (isLoading === true) {
-		return <h1>Cargando item...</h1>;
+		return (
+			<div style={{display: "flex", justifyContent: "center"}}>
+				<InfinitySpin width="300" color="black" />
+			</div>
+		);
 	}
 
 	return <ItemDetail {...item} />;

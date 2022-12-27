@@ -5,6 +5,7 @@ import "./ItemsContainer.css";
 import {useParams} from "react-router-dom";
 import {collection, getDocs, query, where} from "firebase/firestore";
 import {db} from "../../servicios/firebase/firebaseConfig";
+import {InfinitySpin} from "react-loader-spinner";
 
 const ItemsContainer = () => {
 	const [items, setItems] = useState([]);
@@ -34,7 +35,11 @@ const ItemsContainer = () => {
 	}, [categoriaId]);
 
 	if (loading === true) {
-		return <h1>spinner</h1>;
+		return (
+			<div style={{display: "flex", justifyContent: "center"}}>
+				<InfinitySpin width="300" color="black" />
+			</div>
+		);
 	}
 
 	return (

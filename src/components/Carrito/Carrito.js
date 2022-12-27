@@ -1,5 +1,6 @@
 import {useContext} from "react";
 import {alCarritoContext} from "../../Contexts/CartContext/CartContext";
+import {Link} from "react-router-dom";
 
 const Carrito = () => {
 	const {alCarrito, getTotal, removeItem, clearAll} =
@@ -26,6 +27,8 @@ const Carrito = () => {
 			<button onClick={() => clearAll()}>Borrar todo</button>
 
 			<h1>Total a pagar: $ {mostrarTotal} </h1>
+
+			<Link to={"/checkout"}>Terminar Orden</Link>
 		</div>
 	);
 };
