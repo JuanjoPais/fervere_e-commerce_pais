@@ -11,7 +11,8 @@ import {
 } from "firebase/firestore";
 import {db} from "../../servicios/firebase/firebaseConfig";
 import {InfinitySpin} from "react-loader-spinner";
-import {Link, navigate, useNavigate} from "react-router-dom";
+import {navigate, useNavigate} from "react-router-dom"; // eslint-disable-line
+import {Link} from "react-router-dom";
 import swal from "sweetalert";
 
 const Checkout = () => {
