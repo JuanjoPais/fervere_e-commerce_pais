@@ -19,6 +19,9 @@ const Checkout = () => {
 	const {alCarrito, getTotal, clearAll} = useContext(alCarritoContext);
 	const [loading, setloading] = useState(false);
 	const navigate = useNavigate();
+	const [name, setName] = useState("");
+	const [email, setEmail] = useState("");
+	const [phone, setPhone] = useState("");
 
 	const handleCreateOrder = async () => {
 		setloading(true);
@@ -26,9 +29,9 @@ const Checkout = () => {
 		try {
 			const objOrder = {
 				buyer: {
-					name: "Juan Jose Pais",
-					email: "juanjo_pais@hotmail.com",
-					phone: "144444444",
+					name: name,
+					email: email,
+					phone: phone,
 				},
 				items: alCarrito,
 				total: getTotal(),
@@ -62,6 +65,8 @@ const Checkout = () => {
 				}
 			});
 
+			console.log(objOrder);
+
 			if (outOfStock.length === 0) {
 				await batch.commit();
 
@@ -84,6 +89,7 @@ const Checkout = () => {
 				swal("No hay stock de ese producto");
 			}
 		} catch (error) {
+			console.error(error);
 			swal("no se puede asegurar el stock de este pedido");
 		} finally {
 			setloading(false);
@@ -99,11 +105,38 @@ const Checkout = () => {
 		);
 	}
 
+	const handleSubmit = (e) => {
+		e.preventDefault();
+		handleCreateOrder();
+	};
+
 	return (
 		<div>
 			<h1>Checkout</h1>
+			<div>
+				<form onSubmit={handleSubmit}>
+					Ingresá tu nombre
+					<input
+						type="text"
+						value={name}
+						onChange={(e) => setName(e.target.value)}
+					/>
+					Ingresá tu e-mail
+					<input
+						type="text"
+						value={email}
+						onChange={(e) => setEmail(e.target.value)}
+					/>
+					Ingresá tu teléfono
+					<input
+						type="number"
+						value={phone}
+						onChange={(e) => setPhone(e.target.value)}
+					/>
+					<button type="submit">Confirmar Orden</button>
+				</form>
+			</div>
 
-			<button onClick={handleCreateOrder}>Confirmar Orden</button>
 			<Link to={"/"}>Volver a Home</Link>
 		</div>
 	);
