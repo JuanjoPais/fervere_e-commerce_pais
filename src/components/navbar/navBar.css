@@ -14,6 +14,7 @@
 	justify-content: space-between;
 	background-color: orange;
 	border-bottom: 2px black solid;
+	height: 50%;
 }
 .logo {
 	width: 70%;
@@ -22,21 +23,27 @@
 }
 
 .btnNav {
-	font-size: large;
+	font-size: x-large;
 	font-family: "Secular One", sans-serif;
 	border: none;
 	box-shadow: 3px 3px 1px black;
 	background-color: orange;
 	cursor: pointer;
 	text-decoration: none;
+	padding: 2%;
 }
 
 .btnNavActive {
-	font-size: large;
+	font-size: x-large;
 	font-family: "Secular One", sans-serif;
 	border: none;
 	box-shadow: 3px 3px 1px black;
 	background-color: rgb(156, 202, 113);
 	cursor: pointer;
 	text-decoration: none;
+	padding: 2%;
+}
+nav ul {
+	width: 50%;
+	height: 100%;
 }

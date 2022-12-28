@@ -53,13 +53,19 @@ const Navbar = () => {
 
 				{user ? (
 					<li className="linkNav">
-						<NavLink to={"/login"} className="btnNav">
+						<NavLink
+							to={"/login"}
+							className={({isActive}) => (isActive ? "btnNavActive" : "btnNav")}
+						>
 							Logout
 						</NavLink>
 					</li>
 				) : (
 					<li className="linkNav">
-						<NavLink to={"/login"} className="btnNav">
+						<NavLink
+							to={"/login"}
+							className={({isActive}) => (isActive ? "btnNavActive" : "btnNav")}
+						>
 							Login
 						</NavLink>
 					</li>
