@@ -54,6 +54,7 @@ hacer un footer
 modificar búsqueda de órdenes
 hacer desaparecer el warning
 subir a versel
+recuadro para filtrar
 */
 
 export default App;

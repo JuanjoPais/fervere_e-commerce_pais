@@ -2,9 +2,9 @@ import {useState, useEffect} from "react";
 import {useParams} from "react-router-dom";
 import "./ItemDetailContainer.css";
 import ItemDetail from "../ItemDetail/ItemDetail";
-import {getDoc, doc} from "firebase/firestore";
-import {db} from "../../servicios/firebase/firebaseConfig";
 import {InfinitySpin} from "react-loader-spinner";
+import {getProductById} from "../../servicios/firebase/firestore/products";
+import swal from "sweetalert";
 
 const ItemDetailContainer = () => {
 	const [item, setItem] = useState({});
@@ -13,18 +13,13 @@ const ItemDetailContainer = () => {
 
 	useEffect(() => {
 		setIsLoading(true);
-		const productRef = doc(db, "products", itemId);
 
-		getDoc(productRef)
-			.then((response) => {
-				const data = response.data();
-
-				const productAdapted = {id: response.id, ...data};
-
-				setItem(productAdapted);
+		getProductById(itemId)
+			.then((product) => {
+				setItem(product);
 			})
 			.catch((error) => {
-				console.error(error);
+				swal("Hubo un error al cargar los items. Recargá la página por favor.");
 			})
 			.finally(() => {
 				setIsLoading(false);
