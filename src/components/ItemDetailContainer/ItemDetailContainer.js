@@ -19,6 +19,7 @@ const ItemDetailContainer = () => {
 				setItem(product);
 			})
 			.catch((error) => {
+				console.error(error);
 				swal("Hubo un error al cargar los items. Recargá la página por favor.");
 			})
 			.finally(() => {

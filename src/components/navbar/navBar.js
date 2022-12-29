@@ -71,6 +71,17 @@ const Navbar = () => {
 					</li>
 				)}
 
+				{user && (
+					<li className="linkNav">
+						<NavLink
+							to={"/user"}
+							className={({isActive}) => (isActive ? "btnNavActive" : "btnNav")}
+						>
+							Mi cuenta
+						</NavLink>
+					</li>
+				)}
+
 				{user && <CartWidget />}
 			</ul>
 		</nav>
