@@ -1,7 +1,6 @@
 import "./carrito.css";
 import {useContext} from "react";
 import {alCarritoContext} from "../../Contexts/CartContext/CartContext";
-import {Link} from "react-router-dom";
 
 const CartWidget = () => {
 	const {getCantidad, getTotal} = useContext(alCarritoContext);
@@ -10,17 +9,17 @@ const CartWidget = () => {
 	const totalAApagar = getTotal();
 
 	return (
-		<button className="btnCarrito">
+		<div className=" btnCarrito">
 			<img
 				src={process.env.PUBLIC_URL + "/images/beverage.png"}
 				alt="carrito"
 				className="iconoCarrito"
 			/>
-			<Link to="/carrito" className="contadorCarrito">
+			<div className="contadorCarrito">
 				<h4>{cantidadTotal} items</h4>
 				<h4>${totalAApagar}</h4>
-			</Link>
-		</button>
+			</div>
+		</div>
 	);
 };
 

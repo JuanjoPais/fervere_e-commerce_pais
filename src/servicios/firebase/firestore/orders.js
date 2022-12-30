@@ -1,4 +1,4 @@
-import {collection, query, where, getDoc, doc} from "firebase/firestore";
+import {getDoc, doc} from "firebase/firestore";
 import {db} from "../firebaseConfig";
 
 export const getOrderById = (orderId) => {
@@ -8,8 +8,7 @@ export const getOrderById = (orderId) => {
 		getDoc(orderRef)
 			.then((response) => {
 				const data = response.data();
-
-				console.log(response.data);
+				console.log(data);
 
 				const orderAdapted = {id: response.id, ...data};
 

@@ -1,5 +1,9 @@
-const ShowOrder = ({objOrder, items, total}) => {
-	return <div>{console.log(objOrder)}</div>;
+const ShowOrder = ({buyer, total, items}) => {
+	return (
+		<div>
+			<p>{total}</p>
+		</div>
+	);
 };
 
 export default ShowOrder;

@@ -11,19 +11,23 @@ const InputNavbar = () => {
 	const [isLoading, setIsLoading] = useState(false);
 
 	useEffect(() => {
-		setIsLoading(true);
+		if (orderQuery) {
+			setIsLoading(true);
 
-		getOrderById(orderQuery)
-			.then((order) => {
-				setOrder(order);
-			})
-			.catch((error) => {
-				console.error(error);
-				swal("Hubo un error al cargar los items. Recargá la página por favor.");
-			})
-			.finally(() => {
-				setIsLoading(false);
-			});
+			getOrderById(orderQuery)
+				.then((order) => {
+					setOrder(order);
+				})
+				.catch((error) => {
+					console.error(error);
+					swal(
+						"Hubo un error al cargar los items. Recargá la página por favor."
+					);
+				})
+				.finally(() => {
+					setIsLoading(false);
+				});
+		}
 	}, [orderQuery]);
 
 	if (isLoading === true) {

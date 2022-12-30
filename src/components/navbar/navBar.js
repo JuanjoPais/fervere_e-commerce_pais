@@ -81,8 +81,13 @@ const Navbar = () => {
 						</NavLink>
 					</li>
 				)}
-
-				{user && <CartWidget />}
+				{user && (
+					<li>
+						<NavLink to={"/carrito"}>
+							<CartWidget />
+						</NavLink>
+					</li>
+				)}
 			</ul>
 		</nav>
 	);

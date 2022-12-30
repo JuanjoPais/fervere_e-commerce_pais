@@ -4,15 +4,23 @@
 }
 
 .btnCarrito {
-	border: none;
-	background-color: orange;
-	margin-right: 20px;
-	cursor: pointer;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: absolute;
+	top: 5%;
+	left: 89%;
+	border: 2px, black, solid;
+	list-style: none;
 }
 
 .contadorCarrito {
-	border: 1px solid white;
-	border-radius: 50%;
-	background-color: black;
-	color: white;
+	color: black;
+	line-height: 5%;
+}
+
+::marker {
+	display: none;
+	color: orange;
 }

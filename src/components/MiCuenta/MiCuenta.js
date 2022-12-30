@@ -4,10 +4,10 @@ import InputNavbar from "../InputNavbar/InputNavbar";
 
 const MiCuenta = () => {
 	const {user} = useContext(AuthContext);
+
 	return (
 		<div>
-			<h1>{`Bienvenid@ ${user}`}</h1>
-
+			{<h1>Bienvenid@ {user}</h1>}
 			<div>
 				<InputNavbar />
 			</div>
