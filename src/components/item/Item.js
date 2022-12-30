@@ -6,17 +6,19 @@ const Item = ({item}) => {
 	return (
 		<div>
 			<Fav />
+			<div className="itemContainer">
+				<div className="item">
+					<Link to={`/item/${item.id}`}>
+						<img className="fotoItem" src={item.url} alt="foto de birra"></img>
+					</Link>
+					<div>
+						<h2>{item.nombre}</h2>
+						<p>{item.categoria}</p>
+						<p>{item.descripcion}</p>
 
-			<div className="item">
-				<Link to={`/item/${item.id}`}>
-					<img className="fotoItem" src={item.url} alt="foto de birra"></img>
-				</Link>
-				<h2>{item.nombre}</h2>
-				<p>{item.categoria}</p>
-				<p>{item.descripcion}</p>
-			</div>
-			<div>
-				<Link to={`/item/${item.id}`}>Ver detalle</Link>
+						<Link to={`/item/${item.id}`}>Ver detalle</Link>
+					</div>
+				</div>
 			</div>
 		</div>
 	);
