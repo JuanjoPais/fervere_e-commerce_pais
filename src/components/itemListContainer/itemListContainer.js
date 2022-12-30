@@ -4,7 +4,7 @@ import ItemsContainer from "../itemsContainer/ItemsContainer";
 const ItemListContainer = ({greeting}) => {
 	return (
 		<div className="grillaItems">
-			<h1 className="main">{greeting}</h1>
+			<h1 className="title">{greeting}</h1>
 
 			<section className="grillaItems">
 				<ItemsContainer />

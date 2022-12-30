@@ -1,11 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Bahiana&family=Bangers&family=Bebas+Neue&family=Caveat:wght@500&family=Chivo&family=Courgette&family=Metal&family=Mouse+Memoirs&family=Noto+Sans:wght@300&family=Permanent+Marker&family=Satisfy&family=Secular+One&display=swap");
 
-.main {
-	min-height: min-content;
+.title {
 	font-family: "Aladin";
 	font-style: italic;
-	font-size: xx-large;
+	font-size: 300%;
+	display: block;
+	background-color: rgb(109, 49, 49);
+	color: white;
+	margin-left: 5%;
+	margin-right: 5%;
 }
 .grillaItems {
-	display: grid !important;
+	width: auto;
 }

@@ -15,10 +15,15 @@ const CartWidget = () => {
 				alt="carrito"
 				className="iconoCarrito"
 			/>
-			<div className="contadorCarrito">
-				<h4>{cantidadTotal} items</h4>
-				<h4>${totalAApagar}</h4>
-			</div>
+			{cantidadTotal && (
+				<div className="textoCarrito">
+					<div className="items">
+						<p>{cantidadTotal}</p>
+						<p>items</p>
+					</div>
+					<p>${totalAApagar}</p>
+				</div>
+			)}
 		</div>
 	);
 };

@@ -1,26 +1,52 @@
 .iconoCarrito {
 	width: 30px;
 	height: 30px;
+	margin-bottom: 9%;
 }
 
 .btnCarrito {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 	justify-content: center;
-	align-items: center;
+	align-items: flex-end;
 	position: absolute;
-	top: 5%;
-	left: 89%;
-	border: 2px, black, solid;
-	list-style: none;
+	top: 1%;
+	right: 2%;
+	width: 100px;
+
+	gap: 10%;
+	height: min-content;
+	color: black;
+	background-color: rgb(241, 187, 86);
+	border-radius: 10%;
+	padding: 0.5%;
+	box-shadow: 3px 3px 1px black;
 }
 
-.contadorCarrito {
+.btnCarrito:hover {
+	background-color: rgb(154, 209, 132);
 	color: black;
-	line-height: 5%;
 }
+.btnCarrito:visited {
+	color: black;
+}
+.textoCarrito {
+	display: flex;
+	flex-direction: column;
+	font-size: small;
+	color: black;
+	line-height: 10%;
+	margin-right: 5%;
+}
+.items {
+	display: flex;
+	flex-direction: row;
+	gap: 10%;
+	margin-top: 10%;
+	color: black;
+} /*
 
 ::marker {
 	display: none;
 	color: orange;
-}
+}*/

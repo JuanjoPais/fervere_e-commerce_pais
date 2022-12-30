@@ -1,4 +1,5 @@
 import "./App.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Navbar from "./components/navbar/navBar";
 import ItemListContainer from "./components/itemListContainer/itemListContainer";
 

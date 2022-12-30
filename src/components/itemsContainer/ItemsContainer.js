@@ -19,6 +19,7 @@ const ItemsContainer = () => {
 				setItems(products);
 			})
 			.catch((error) => {
+				console.error(error);
 				swal("Hubo un error al cargar los items. Recargá la página por favor.");
 			})
 			.finally(() => {
@@ -36,8 +37,7 @@ const ItemsContainer = () => {
 
 	return (
 		<div>
-			<h1>Products</h1>
-			<div className="contenedor">
+			<div>
 				<ItemList items={items} />
 			</div>
 		</div>

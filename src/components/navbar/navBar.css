@@ -1,51 +1,88 @@
 @import url("https://fonts.googleapis.com/css2?family=Bahiana&family=Bangers&family=Bebas+Neue&family=Caveat:wght@500&family=Chivo&family=Courgette&family=Metal&family=Mouse+Memoirs&family=Noto+Sans:wght@300&family=Permanent+Marker&family=Satisfy&family=Secular+One&display=swap");
-
-.linkNav {
-	margin: 20px;
-	text-decoration: none;
-	list-style: none;
-	display: inline;
-}
+@import url("https://fonts.googleapis.com/css2?family=Aladin&family=Amatic+SC:wght@700&family=Bahiana&family=Bangers&family=Bebas+Neue&family=Caveat:wght@500&family=Chivo&family=Courgette&family=Metal&family=Mouse+Memoirs&family=Noto+Sans:wght@300&family=Permanent+Marker&family=Satisfy&family=Secular+One&display=swap");
 
 .nav {
 	display: flex;
-	flex-wrap: wrap;
+	flex-direction: row;
 	align-items: center;
-	justify-content: center;
+	height: min-content;
+
 	background-color: orange;
 	border-bottom: 2px black solid;
-	height: 50%;
-	width: 100%;
-	flex-direction: column;
+	margin-bottom: 100px;
 }
+
+.componentNav {
+	margin: auto;
+	display: flex;
+	justify-content: space-around;
+	gap: 5%;
+	width: 80%;
+	align-items: center;
+	margin-right: 10%;
+	margin-left: 10%;
+	margin-bottom: 20px;
+}
+
 .logo {
-	width: 70%;
-	height: 70%;
+	width: 100%;
+	min-width: 80%;
+	height: 100;
 	padding: 1%;
+	margin-top: 12%;
+	z-index: 1;
+}
+.containerLogo {
+	display: block;
+	height: 100px;
+
+	position: absolute;
+	top: -5px;
+	z-index: 1;
+
+	width: 12%;
+	min-width: 100px;
+	height: 15%;
 }
 
 .btnNav {
-	font-size: 80%;
-	font-family: "Secular One", sans-serif;
-	border: none;
+	font-size: x-large;
+	font-family: "Amatic SC", cursive;
+	color: black;
 	box-shadow: 3px 3px 1px black;
-	background-color: orange;
+	background-color: rgb(241, 187, 86);
 	cursor: pointer;
 	text-decoration: none;
-	padding: 2%;
+	padding: 1%;
+	border: 1px, solid, black;
+	border-radius: 8%;
+	margin-top: 5%;
+}
+
+.btnNav:hover {
+	background-color: rgb(154, 209, 132);
+	color: black;
+}
+
+.btnNav:visited {
+	color: black;
 }
 
 .btnNavActive {
-	font-size: 80%;
-	font-family: "Secular One", sans-serif;
+	font-size: x-large;
+	font-family: "Amatic SC", cursive;
 	border: none;
 	box-shadow: 3px 3px 1px black;
-	background-color: rgb(156, 202, 113);
+	background-color: rgb(154, 209, 132);
 	cursor: pointer;
 	text-decoration: none;
-	padding: 2%;
+	padding: 1%;
+	border-radius: 5%;
+	color: black;
+	margin-top: 5%;
 }
-nav ul {
-	width: 100%;
-	height: 100%;
+
+.toggle {
+	margin: auto;
+	margin-right: auto 10% auto auto;
 }

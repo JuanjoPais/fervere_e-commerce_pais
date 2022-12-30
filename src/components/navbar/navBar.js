@@ -3,93 +3,97 @@ import CartWidget from "../cartWidget/cartWidget";
 import {NavLink} from "react-router-dom";
 import {AuthContext} from "../../Contexts/AuthContext/AuthContext";
 import {useContext} from "react";
+import NavbarBoostrap from "react-bootstrap/Navbar";
+import Nav from "react-bootstrap/Nav";
 
 const Navbar = () => {
 	const {user} = useContext(AuthContext);
 	return (
-		<nav className="nav">
+		<>
 			<NavLink to={"/"}>
-				<img
-					className="logo"
-					src={process.env.PUBLIC_URL + "/images/logo.png"}
-					alt="logoFervere"
-				/>
+				<div className="containerLogo">
+					<img
+						className="logo"
+						src={process.env.PUBLIC_URL + "/images/logo.png"}
+						alt="logoFervere"
+					/>
+				</div>
 			</NavLink>
+			<NavbarBoostrap className="nav" collapseOnSelect expand="md">
+				<NavbarBoostrap.Toggle
+					className="toggle"
+					aria-controls="responsive-navbar-nav"
+				/>
 
-			<ul>
-				<li className="linkNav">
-					<NavLink
-						to={"/"}
-						className={({isActive}) => (isActive ? "btnNavActive" : "btnNav")}
-					>
-						Home
-					</NavLink>
-				</li>
-
-				<li className="linkNav">
-					<NavLink
-						to={"/categoria/Botellas"}
-						className={({isActive}) => (isActive ? "btnNavActive" : "btnNav")}
-					>
-						Botellas
-					</NavLink>
-				</li>
-				<li className="linkNav">
-					<NavLink
-						to={"/categoria/Growler"}
-						className={({isActive}) => (isActive ? "btnNavActive" : "btnNav")}
-					>
-						Growlers
-					</NavLink>
-				</li>
-				<li className="linkNav">
-					<NavLink
-						to={"/categoria/Merchandising"}
-						className={({isActive}) => (isActive ? "btnNavActive" : "btnNav")}
-					>
-						Merchandising
-					</NavLink>
-				</li>
-
-				{user ? (
-					<li className="linkNav">
+				<NavbarBoostrap.Collapse className="collapseContainer">
+					<Nav className="componentNav">
 						<NavLink
-							to={"/login"}
+							to={"/"}
 							className={({isActive}) => (isActive ? "btnNavActive" : "btnNav")}
 						>
-							Logout
+							Home
 						</NavLink>
-					</li>
-				) : (
-					<li className="linkNav">
-						<NavLink
-							to={"/login"}
-							className={({isActive}) => (isActive ? "btnNavActive" : "btnNav")}
-						>
-							Login
-						</NavLink>
-					</li>
-				)}
 
-				{user && (
-					<li className="linkNav">
 						<NavLink
-							to={"/user"}
+							to={"/categoria/Botellas"}
 							className={({isActive}) => (isActive ? "btnNavActive" : "btnNav")}
 						>
-							Mi cuenta
+							Botellas
 						</NavLink>
-					</li>
-				)}
-				{user && (
-					<li>
-						<NavLink to={"/carrito"}>
-							<CartWidget />
+
+						<NavLink
+							to={"/categoria/Growler"}
+							className={({isActive}) => (isActive ? "btnNavActive" : "btnNav")}
+						>
+							Growlers
 						</NavLink>
-					</li>
-				)}
-			</ul>
-		</nav>
+
+						<NavLink
+							to={"/categoria/Merchandising"}
+							className={({isActive}) => (isActive ? "btnNavActive" : "btnNav")}
+						>
+							Merchandising
+						</NavLink>
+
+						{user ? (
+							<NavLink
+								to={"/login"}
+								className={({isActive}) =>
+									isActive ? "btnNavActive" : "btnNav"
+								}
+							>
+								Logout
+							</NavLink>
+						) : (
+							<NavLink
+								to={"/login"}
+								className={({isActive}) =>
+									isActive ? "btnNavActive" : "btnNav"
+								}
+							>
+								Login
+							</NavLink>
+						)}
+
+						{user && (
+							<NavLink
+								to={"/user"}
+								className={({isActive}) =>
+									isActive ? "btnNavActive" : "btnNav"
+								}
+							>
+								Mi cuenta
+							</NavLink>
+						)}
+					</Nav>
+				</NavbarBoostrap.Collapse>
+			</NavbarBoostrap>
+			{user && (
+				<NavLink to={"/carrito"}>
+					<CartWidget />
+				</NavLink>
+			)}
+		</>
 	);
 };
 
