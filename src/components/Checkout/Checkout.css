@@ -1,0 +1,34 @@
+.contenedorCheckout {
+	display: flex;
+	flex-direction: column;
+	align-items: stretch;
+	width: 100%;
+	margin-top: 50px;
+}
+
+.formCheckout {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+	align-items: center;
+	gap: 5px;
+}
+
+.divCheckout {
+	display: flex;
+	justify-content: space-around;
+	margin-bottom: 25px;
+}
+.fotoMoe {
+	width: 300px;
+	margin-right: 50%;
+}
+
+@media (max-width: 660px) {
+	.divCheckout {
+		flex-direction: column;
+		align-items: center;
+		gap: 25px;
+	}
+}

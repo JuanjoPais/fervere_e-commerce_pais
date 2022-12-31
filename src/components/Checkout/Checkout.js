@@ -14,6 +14,8 @@ import {InfinitySpin} from "react-loader-spinner";
 import {navigate, useNavigate} from "react-router-dom"; // eslint-disable-line
 import {Link} from "react-router-dom";
 import swal from "sweetalert";
+import "./Checkout.css";
+import {Button} from "react-bootstrap";
 
 const Checkout = () => {
 	const {alCarrito, getTotal, clearAll} = useContext(alCarritoContext);
@@ -80,7 +82,7 @@ const Checkout = () => {
 
 				clearAll();
 				swal(
-					"Tu número de order llegará a tu correo. Serás redirigido al Home en 5 segundos. Muchas gracias por tu compra =)"
+					`Tu número de orden es${orderAdded.id}. En unos instantes te llegará el detalle a tu correo. Serás redirigido al Home en 5 segundos. Muchas gracias por tu compra =)`
 				);
 				setTimeout(() => {
 					navigate("/");
@@ -111,33 +113,47 @@ const Checkout = () => {
 	};
 
 	return (
-		<div>
+		<div className="contenedorCheckout">
 			<h1>Checkout</h1>
-			<div>
-				<form onSubmit={handleSubmit}>
+			<div className="divCheckout">
+				<div>
+					<img
+						src={process.env.PUBLIC_URL + "/images/moe.png"}
+						alt="fotoBarney"
+						className="fotoMoe"
+					></img>
+				</div>
+				<form onSubmit={handleSubmit} className="formCheckout">
 					Ingresá tu nombre
 					<input
 						type="text"
 						value={name}
 						onChange={(e) => setName(e.target.value)}
+						required
 					/>
 					Ingresá tu e-mail
 					<input
 						type="text"
 						value={email}
 						onChange={(e) => setEmail(e.target.value)}
+						required
 					/>
 					Ingresá tu teléfono
 					<input
-						type="number"
+						type="text"
 						value={phone}
 						onChange={(e) => setPhone(e.target.value)}
+						required
 					/>
-					<button type="submit">Confirmar Orden</button>
+					<Button variant="dark" type="submit">
+						Confirmar Orden
+					</Button>
 				</form>
 			</div>
 
-			<Link to={"/"}>Volver a Home</Link>
+			<Link to={"/"}>
+				<Button variant="dark">Volver a Home</Button>
+			</Link>
 		</div>
 	);
 };

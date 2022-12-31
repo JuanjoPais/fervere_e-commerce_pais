@@ -43,7 +43,7 @@ const InputNavbar = () => {
 	};
 
 	return (
-		<div>
+		<div className="contenedorInputOrder">
 			<div className="input">
 				<form onSubmit={handleSubmit}>
 					<p>Ingresá tu número de Orden</p>
@@ -54,8 +54,9 @@ const InputNavbar = () => {
 					<button type="submit">Buscar</button>
 				</form>
 			</div>
+
 			<div>
-				<ShowOrder {...order} />
+				<ShowOrder {...order} value={orderQuery.id} />
 			</div>
 		</div>
 	);

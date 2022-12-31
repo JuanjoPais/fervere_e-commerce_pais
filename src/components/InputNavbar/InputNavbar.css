@@ -1,10 +1,19 @@
 .input {
-	position: relative;
-	left: 6%;
-	top: -32%;
 	padding: 1%;
 	width: fit-content;
 	border: 2px solid black;
-	border-radius: 5%;
+	border-radius: 2%;
 	background-color: orange;
+}
+
+.contenedorInputOrder {
+	display: flex;
+	align-items: center;
+	margin: auto;
+}
+
+@media (max-width: 660px) {
+	.contenedorInputOrder {
+		flex-direction: column;
+	}
 }

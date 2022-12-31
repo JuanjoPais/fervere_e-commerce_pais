@@ -10,7 +10,6 @@ import {CartProvider} from "./Contexts/CartContext/CartContext";
 import Login from "./components/Login/Login";
 import {AuthProvider} from "./Contexts/AuthContext/AuthContext";
 import Checkout from "./components/Checkout/Checkout";
-import MiCuenta from "./components/MiCuenta/MiCuenta";
 
 function App() {
 	return (
@@ -36,7 +35,6 @@ function App() {
 							<Route path="/carrito" element={<Carrito />} />
 							<Route path="/login" element={<Login />} />
 							<Route path="/Checkout" element={<Checkout />} />
-							<Route path="/user" element={<MiCuenta />} />
 						</Routes>
 					</BrowserRouter>
 				</CartProvider>

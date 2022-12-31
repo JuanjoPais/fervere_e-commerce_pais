@@ -1,4 +1,4 @@
-import "./carrito.css";
+import "./CartWidget.css";
 import {useContext} from "react";
 import {alCarritoContext} from "../../Contexts/CartContext/CartContext";
 
@@ -21,7 +21,7 @@ const CartWidget = () => {
 						<p>{cantidadTotal}</p>
 						<p>items</p>
 					</div>
-					<p>${totalAApagar}</p>
+					<p>$ {totalAApagar}</p>
 				</div>
 			)}
 		</div>

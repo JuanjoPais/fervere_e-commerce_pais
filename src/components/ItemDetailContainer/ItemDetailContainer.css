@@ -1,12 +1,37 @@
+@import url("https://fonts.googleapis.com/css2?family=Aladin&family=Amatic+SC:wght@700&family=Bahiana&family=Bangers&family=Bebas+Neue&family=Caveat:wght@500&family=Chivo&family=Courgette&family=Metal&family=Mouse+Memoirs&family=Noto+Sans:wght@300&family=Permanent+Marker&family=Satisfy&family=Secular+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Aladin&family=Amatic+SC:wght@700&family=Archivo:ital,wght@1,300&family=Bahiana&family=Bangers&family=Bebas+Neue&family=Caveat:wght@500&family=Chivo&family=Courgette&family=Metal&family=Mouse+Memoirs&family=Noto+Sans:wght@300&family=Permanent+Marker&family=Satisfy&family=Secular+One&display=swap");
+
 .fotoDetalle {
-	width: 20%;
-	height: 20%;
+	width: 30%;
+	height: 30%;
 	border: 2px solid black;
 	border-radius: 10%;
+	min-height: 100px;
+	min-width: 100px;
 }
 
 .cajaDetalle {
 	display: flex;
+	flex-wrap: wrap;
 	justify-content: space-evenly;
 	align-items: center;
+	background-color: rgb(241, 187, 86);
+	width: 70%;
+
+	margin: auto;
+	margin-top: 50px;
+	padding: 1%;
+	box-shadow: 3px 3px 1px black;
+}
+
+.datosItem {
+	font-size: large;
+	font-family: "Archivo", sans-serif;
+	font-weight: 600;
+}
+
+.tituloItem {
+	font-family: "Amatic SC", cursive;
+	font-size: 350%;
+	text-decoration: underline;
 }

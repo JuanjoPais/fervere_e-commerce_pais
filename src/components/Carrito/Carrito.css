@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Aladin&family=Amatic+SC:wght@700&family=Archivo:ital,wght@1,300&family=Bahiana&family=Bangers&family=Bebas+Neue&family=Caveat:wght@500&family=Chivo&family=Courgette&family=Metal&family=Mouse+Memoirs&family=Noto+Sans:wght@300&family=Permanent+Marker&family=Satisfy&family=Secular+One&display=swap");
+
+.mapeoCarrito {
+	display: flex;
+	flex-direction: column;
+
+	height: 80%;
+	width: 80%;
+	margin: auto;
+	margin-top: 25px;
+	background-color: rgb(241, 187, 86);
+	padding: 1%;
+	box-shadow: 3px 3px 1px black;
+}
+
+.itemsCarrito {
+	display: flex;
+	flex-direction: row;
+	height: fit-content;
+	align-items: center;
+	justify-content: space-between;
+	font-size: large;
+	font-family: "Archivo", sans-serif;
+	font-weight: 600;
+	flex-wrap: wrap;
+}
+
+.imgCarrito {
+	height: 100px;
+}
+
+.cabezaCarrito {
+	height: 50px;
+	margin-top: 50px;
+	padding-left: 10px;
+	padding-right: 10px;
+	display: flex;
+}
+
+.itemsCabezaCarrito {
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.btnBorrarTodo {
+	margin-top: 30px;
+}
+
+.total {
+	display: flex;
+	justify-content: space-around;
+	margin-top: 30px;
+}
+
+.textoTotal {
+	font-size: xx-large;
+	font-family: "Archivo", sans-serif;
+	font-weight: 900;
+}
+
+@media (max-width: 660px) {
+	.cabezaCarrito {
+		display: none;
+	}
+	.itemsCarrito {
+		flex-direction: column;
+	}
+	.total {
+		flex-direction: column;
+	}
+}

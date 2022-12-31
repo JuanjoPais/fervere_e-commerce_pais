@@ -24,14 +24,15 @@ const ItemDetail = ({
 
 	return (
 		<div>
-			<h1>Detalle del Item</h1>
 			<div className="cajaDetalle">
 				<img className="fotoDetalle" src={url} alt="detalle del producto"></img>
 				<div className="datosDetalle">
-					<h3>{nombre}</h3>
-					<p>{categoria}</p>
-					<p>$ {precio}</p>
-					<p>{descripcion}</p>
+					<h3 className="tituloItem">{nombre}</h3>
+					<div className="datosItem">
+						<p>{categoria}</p>
+						<p>$ {precio}</p>
+						<p>{descripcion}</p>
+					</div>
 
 					{stock === 0 ? (
 						<h2>Producto sin stock</h2>
