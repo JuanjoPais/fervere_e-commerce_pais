@@ -67,16 +67,12 @@ const Checkout = () => {
 				}
 			});
 
-			console.log(objOrder);
-
 			if (outOfStock.length === 0) {
 				await batch.commit();
 
 				const orderRef = collection(db, "orders");
 
 				const orderAdded = await addDoc(orderRef, objOrder);
-
-				//ver de mandar este id por mail
 
 				console.log(orderAdded.id);
 

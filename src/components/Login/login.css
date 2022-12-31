@@ -49,4 +49,7 @@
 	.botonesLogout {
 		width: fit-content;
 	}
+	.contenedorlogin {
+		flex-direction: column;
+	}
 }

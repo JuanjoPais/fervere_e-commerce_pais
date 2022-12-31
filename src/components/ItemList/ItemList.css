@@ -6,3 +6,12 @@
 	justify-content: center;
 	gap: 10%;
 }
+
+@media (max-width: 660px) {
+	.mapeoItems {
+		flex-direction: column;
+		width: 50%;
+		align-items: center;
+		margin: auto;
+	}
+}
